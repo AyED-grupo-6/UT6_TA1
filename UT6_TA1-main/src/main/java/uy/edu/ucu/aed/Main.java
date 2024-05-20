@@ -19,14 +19,14 @@ public class Main {
         
         // Crear una tabla de tipo THash e insertar las claves del archivo "claves_insertar.txt"
         THash tabla = new THash();
-        String[] inserciones = ManejadorArchivosGenerico.leerArchivo("UT6_TA1-main/src/main/java/uy/edu/ucu/aed/claves_insertar.txt");
+        String[] inserciones = ManejadorArchivosGenerico.leerArchivo("src/main/java/uy/edu/ucu/aed/claves_insertar.txt");
         for (String clave : inserciones) {
             tabla.insertar(Integer.parseInt(clave));
         }
 
         
         // Buscar en la tabla creada anteriormente las claves indicadas en el archivo "claves_buscar.txt"
-        String[] busquedas = ManejadorArchivosGenerico.leerArchivo("UT6_TA1-main/src/main/java/uy/edu/ucu/aed/claves_buscar.txt");
+        String[] busquedas = ManejadorArchivosGenerico.leerArchivo("src/main/java/uy/edu/ucu/aed/claves_buscar.txt");
         for (String clave : busquedas) {
             int intentos = tabla.buscar(Integer.parseInt(clave));
             if (intentos == -1) {
@@ -36,7 +36,7 @@ public class Main {
             }
         }
 
-        System.out.println(tabla.capacidad);
+       
 
     }
     
